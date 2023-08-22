@@ -43,7 +43,7 @@ const Navbar = () => {
                 </button>
             </section>
 
-            <section className={`bg-black absolute ${menuOpen} h-screen w-screen duration-1000 grid place-items-center`}>
+            <section className={`bg-black bg-opacity-50 backdrop-blur-3xl absolute ${menuOpen} h-screen w-screen duration-1000 grid place-items-center`}>
                 <ul className='font-syne text-center text-2xl flex flex-col lg:flex-row gap-10 lg:gap-40 cursor-pointer sm:text-4xl lg:text-5xl'>
                     <li className='hover:opacity-60 transition-opacity duration-500'>
                         <Link href="/about">
