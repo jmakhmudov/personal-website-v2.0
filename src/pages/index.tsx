@@ -20,10 +20,10 @@ export default function Home() {
         alt='blob'
       />
 
-      <section className={`${syne.className} text-4xl text-center grid place-items-center h-5/6 lg:text-6xl`}>
+      <section className={`${syne.className} text-4xl text-center grid place-items-center h-full sm:text-5xl lg:text-6xl`}>
         <div>
           <h1>Frontend Developer</h1>
-          <p className='text-lg sm:text-xl lg:text-2xl'>UI/UX Designer</p>
+          <p className='text-lg sm:text-xl lg:text-4xl'>UI/UX Designer</p>
         </div>
       </section>
     </main>
