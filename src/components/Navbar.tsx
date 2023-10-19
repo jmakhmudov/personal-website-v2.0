@@ -2,7 +2,6 @@ import logo from '@/assets/JM.svg';
 import Image from 'next/image';
 import { useState } from 'react';
 import Link from 'next/link';
-import '@/styles/components.css'
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState<string>('-top-full');
@@ -18,9 +17,8 @@ const Navbar = () => {
     };
 
     return (
-        <nav className=''>
-
-            <section className=' absolute top-0 left-0 right-0 flex justify-between align-middle py-4 px-3 lg:px-20 z-10'>
+        <nav className='w-screen'>
+            <section className=' absolute top-0 left-0 right-0 flex justify-between align-middle py-4 px-5 lg:px-20 z-50'>
                 <Link href="/">
                     <Image
                         priority
@@ -43,8 +41,8 @@ const Navbar = () => {
                 </button>
             </section>
 
-            <section className={`bg-black bg-opacity-50 backdrop-blur-3xl absolute ${menuOpen} h-screen w-screen duration-1000 grid place-items-center`}>
-                <ul className='font-syne text-center text-2xl flex flex-col lg:flex-row gap-10 lg:gap-40 cursor-pointer sm:text-4xl lg:text-5xl'>
+            <section className={`bg-background absolute left-0 ${menuOpen} h-screen w-screen duration-1000 ease-in-out grid place-items-center z-40`}>
+                <ul className='font-syne font-extrabold text-center text-2xl flex flex-col lg:flex-row gap-10 lg:gap-40 cursor-pointer sm:text-4xl lg:text-5xl'>
                     <li className='hover:opacity-60 transition-opacity duration-500'>
                         <Link href="/about">
                             About

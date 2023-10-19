@@ -17,7 +17,8 @@ module.exports = {
     },
     extend: {
       fontFamily : {
-        syne: ['Syne', 'sans', ]
+        syne: ['Syne', 'sans', ],
+        raleway: ['Raleway', 'sans']
       },
       colors: {
         border: "hsl(var(--border))",
