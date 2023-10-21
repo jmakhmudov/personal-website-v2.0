@@ -6,11 +6,9 @@ import ProjectCard from "@/components/ProjectCard";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const renderSkeleton = () => {
-
-
     return (
         <>
-            <Skeleton className="w-full h-40"/>
+            <Skeleton className="w-full h-60" />
         </>
     )
 }
@@ -40,8 +38,8 @@ const Work = () => {
             <Navbar />
             <section className="mt-28">
                 <h1>Work</h1>
-
-                <section className="grid gap-14 mt-20">
+                
+                <section className="grid gap-20 mt-20 md:grid-cols-2">
                     {
                         projects.length ?
                             projects.map((project) =>

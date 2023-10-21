@@ -1,5 +1,6 @@
 import { Project } from "@/types/project";
 import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
 
 interface ProjectCardProps {
     project: Project
@@ -7,17 +8,33 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
 
-
     return (
-        <section className="">
-            <img className="" src={project.image_url} alt={project.title} />
+        <section>
+            <img className="rounded-lg border-white border-2" src={project.image_url} alt={project.title} />
 
             <section className="mt-4">
                 <section className="mb-4">
-                    <div className="text-xl font-bold">{project.title}</div>
-                    <p className="opacity-50 truncate text-ellipsis w-[250px]">{project.description} sdfsfdsfdsfdsfsdfsdfd asdfadfasdfasdfasdf sdfsdfsdfsdfd</p>
+                    <Badge
+                        variant={"outline"}
+                        className={`${project.status ? "bg-green-500" : "bg-red-500"} bg-opacity-50 mb-4`}
+                    >
+                        {project.status ? "Active" : "Inactive"}
+                    </Badge>
+                    <div className="font-syne text-xl font-extrabold">{project.title}</div>
                 </section>
-                <Button variant={"outline"}>More</Button>
+
+                <div>
+                    <Button variant={"outline"} disabled={!project.status}>
+                        <a href={project.website_url} target="_blank">
+                            Visit
+                        </a>
+                    </Button>
+                    <Button variant={"link"} asChild>
+                        <a href={project.github_url} target="_blank">
+                            Go to repository
+                        </a>
+                    </Button>
+                </div>
             </section>
 
         </section>

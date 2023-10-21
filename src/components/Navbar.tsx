@@ -42,7 +42,7 @@ const Navbar = () => {
             </section>
 
             <section className={`bg-background absolute left-0 ${menuOpen} h-screen w-screen duration-1000 ease-in-out grid place-items-center z-40`}>
-                <ul className='font-syne font-extrabold text-center text-2xl flex flex-col lg:flex-row gap-10 lg:gap-40 cursor-pointer sm:text-4xl lg:text-5xl'>
+                <ul className='font-syne font-extrabold text-center text-3xl flex flex-col lg:flex-row gap-10 lg:gap-40 cursor-pointer sm:text-4xl lg:text-5xl'>
                     <li className='hover:opacity-60 transition-opacity duration-500'>
                         <Link href="/about">
                             About
@@ -51,11 +51,6 @@ const Navbar = () => {
                     <li className='hover:opacity-60 transition-opacity duration-500'>
                         <Link href="/work">
                             Work
-                        </Link>
-                    </li>
-                    <li className='hover:opacity-60 transition-opacity duration-500'>
-                        <Link href="/contact">
-                            Contact
                         </Link>
                     </li>
                 </ul>
