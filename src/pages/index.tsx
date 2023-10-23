@@ -32,7 +32,7 @@ export default function Home() {
       <Button className='fixed right-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-5 w-[180px] '>
         <a className='flex gap-2 items-center' href="https://github.com/jmakhmudov" target='_blank'>
           <BiLogoGithub size="20" />
-          Go to repository
+          Go to GitHub
         </a>
       </Button>
     </main>
